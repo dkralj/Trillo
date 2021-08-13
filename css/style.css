@@ -10,6 +10,7 @@
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
+  --color-white: #fff;
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
   --shadow-light: 0 2rem 5rem rgba(0, 0, 0, .06);
   --line: 1px solid var(--color-grey-light-2);
@@ -150,15 +151,62 @@ body {
   position: absolute;
   top: 5rem;
   left: -3.5rem;
-  background-color: #fff;
-  border: 2px solid var(--color-grey-light-3);
+  background-color: var(--color-grey-dark-1);
+  color: var(--color-white);
   border-radius: 2px;
-  box-sizing: inherit;
+  opacity: 0;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+  display: flex;
+  transition: all 0.5s;
+}
+.user-nav__user:hover .user-nav__user-info {
+  opacity: 1;
 }
 .user-nav__user-info-photo {
-  height: 15rem;
+  height: 15.8rem;
   padding: 1rem;
+  border-radius: 50%;
+  overflow: hidden;
 }
+.user-nav__user-info-name {
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+.user-nav__user-info-list {
+  display: flex;
+  flex-direction: column;
+}
+.user-nav__user-info-item {
+  list-style: none;
+  padding: 0.25rem 0.5rem;
+  transition: all 0.5s;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+.user-nav__user-info-item:first-child {
+  margin-top: 1rem;
+  flex-shrink: 1;
+}
+.user-nav__user-info-item:hover {
+  box-shadow: inset 6.5em 0 0 0 var(--color-primary-light);
+}
+.user-nav__user-info-link:link, .user-nav__user-info-link:visited {
+  text-decoration: none;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+}
+.user-nav__user-info-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 1rem;
+  fill: currentColor;
+}
+
 .side-nav {
   font-size: 1.4rem;
   list-style: none;
