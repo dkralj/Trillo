@@ -1,0 +1,22 @@
+let hotels = [
+    "Hotel Las Palmas", 
+    "Crowne Plaza", 
+    "Emerald Bay Inn", 
+    "Hotel Bliss", 
+    "University Inn", 
+    "The New View", 
+    "Sunset Lodge", 
+    "Hotel Elite",                      
+    "Lake Place Inn", 
+    "Beacon Motel", 
+    "Comfort B&B", 
+    "Motel On Main", 
+    "Holly House", 
+    "High Desert Inn", 
+    "Relax Inn", 
+    "Sapphires Hotel",
+    "Time Motel", 
+    "Spotlight Hotel", 
+    "Spring Brook", 
+    "Hotel Agoura"
+];
