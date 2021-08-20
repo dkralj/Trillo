@@ -522,9 +522,35 @@ body {
 .gallery {
   display: flex;
 }
+.gallery__item {
+  position: relative;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
 .gallery__photo {
   width: 100%;
   display: block;
+  transition: all 0.5s;
+}
+.gallery__caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: all 0.5s;
+  backface-visibility: hidden;
+}
+.gallery__item:hover .gallery__caption {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+.gallery__item:hover .gallery__photo {
+  transform: scale(1.2);
+  filter: blur(3px) brightness(75%);
 }
 
 .overview {
