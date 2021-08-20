@@ -105,6 +105,45 @@ body {
   fill: var(--color-grey-dark-3);
 }
 
+.autocomplete {
+  position: relative;
+  display: flex;
+  width: 100%;
+  z-index: 1000;
+}
+
+.autocomplete-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: var(--color-grey-dark-1);
+  color: var(--color-white);
+}
+
+.autocomplete-items div::after {
+  content: "";
+  display: block;
+  padding: 0.3rem;
+  border-bottom: 3px solid var(--color-primary);
+  transform: scaleX(0);
+  transition: transform 0.25s ease-in-out;
+}
+
+.autocomplete-items div:hover::after {
+  transform: scaleX(1);
+}
+
+.autocomplete-active {
+  background-color: var(--color-primary) !important;
+  color: var(--color-white);
+}
+
 .user-nav {
   display: flex;
   align-items: center;
@@ -635,6 +674,10 @@ body {
   cursor: pointer;
   transition: all 0.2s;
 }
+.btn-inline a {
+  text-decoration: none;
+  color: inherit;
+}
 .btn-inline span {
   margin-left: 3px;
   transition: margin-left 0.2s;
@@ -817,10 +860,11 @@ body {
   overflow: hidden;
   cursor: pointer;
 }
-.btn > * {
+.btn > a > * {
   display: inline-block;
   height: 100%;
   width: 100%;
+  color: #fff;
   transition: all 0.2s;
 }
 .btn__visible {
@@ -846,47 +890,101 @@ body {
   animation: pulsate 1s infinite;
 }
 
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(51, 51, 51, 0.8);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+.popup__content-reviews, .popup__content-booking {
+  border-radius: 3px;
+  box-shadow: 0 2rem 4rem rgba(51, 51, 51, 0.2);
+  padding: 2rem 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.25);
+  transition: all 0.5s 0.2s;
+}
+.popup__content-reviews {
+  width: 75%;
+  background-color: var(--color-white);
+}
+.popup__content-booking {
+  width: 40%;
+  background-color: var(--color-grey-dark-1);
+  border: 2px solid white;
+  color: white;
+}
+.popup__content-booking > .popup__heading > .popup__close:link, .popup__content-booking > .popup__heading > .popup__close:visited {
+  color: white;
+}
+.popup__content-booking > .popup__heading > .popup__close:hover {
+  color: var(--color-primary);
+}
+.popup__content-booking > .popup__heading > .popup__heading-title {
+  flex: 1 0 80%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 3rem;
+}
+.popup__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+.popup__heading-title {
+  font-size: 2.5rem;
+}
+.popup__reviews {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.popup__review {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 30%;
+  margin: 1rem 2rem;
+  font-size: 1.25rem;
+  justify-content: space-between;
+}
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+.popup:target .popup__content-reviews, .popup:target .popup__content-booking {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+.popup__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.popup__close:link, .popup__close:visited {
+  color: var(--color-grey-dark-1);
+  font-size: 3rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s;
+}
+.popup__close:hover {
+  color: var(--color-primary);
+}
+
 .textDecoration {
   text-decoration: none;
-}
-
-.autocomplete {
-  position: relative;
-  display: flex;
-  width: 100%;
-  z-index: 1000;
-}
-
-.autocomplete-items {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-}
-
-.autocomplete-items div {
-  padding: 10px;
-  cursor: pointer;
-  background-color: var(--color-grey-dark-1);
-  color: var(--color-white);
-}
-
-.autocomplete-items div::after {
-  content: "";
-  display: block;
-  padding: 0.3rem;
-  border-bottom: 3px solid var(--color-primary);
-  transform: scaleX(0);
-  transition: transform 0.25s ease-in-out;
-}
-
-.autocomplete-items div:hover::after {
-  transform: scaleX(1);
-}
-
-.autocomplete-active {
-  background-color: var(--color-primary) !important;
-  color: var(--color-white);
 }
 
 .container {

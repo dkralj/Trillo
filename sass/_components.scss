@@ -75,6 +75,48 @@
 
 
 //////////////////////////////////
+// AUTOCOMPLETE
+.autocomplete {
+    position: relative;
+    display: flex;
+    width: 100%;
+    z-index: 1000;
+}
+
+.autocomplete-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: var(--color-grey-dark-1);
+    color: var(--color-white);
+}
+
+.autocomplete-items div::after {
+    content: '';
+    display: block;
+    padding: .3rem;
+    border-bottom: 3px solid var(--color-primary);
+    transform: scaleX(0);
+    transition: transform .25s ease-in-out;
+}
+
+.autocomplete-items div:hover::after {
+    transform: scaleX(1);
+}
+
+.autocomplete-active {
+    background-color: var(--color-primary) !important;
+    color: var(--color-white);
+}
+
+
+//////////////////////////////////
 // USER NAVIGATION
 .user-nav {
     display: flex;
@@ -726,6 +768,11 @@
     cursor: pointer;
     transition: all .2s;
 
+    & a {
+        text-decoration: none;
+        color: inherit;
+    }
+
     & span {
         margin-left: 3px;
         transition: margin-left .2s;
@@ -950,10 +997,11 @@
     overflow: hidden;
     cursor: pointer;
 
-    & > * {
+    & > a > * {
         display: inline-block;
         height: 100%;
         width: 100%;
+        color: #fff;
         transition: all .2s;
     }
 
@@ -988,50 +1036,129 @@
 
 
 //////////////////////////////////
-// UTILITIES
-.textDecoration {
-    text-decoration: none;
-}
+// POPUP
+.popup {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(#333, .8);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
 
+
+    &__content-reviews,
+    &__content-booking {
+        border-radius: 3px;
+        box-shadow: 0 2rem 4rem rgba(#333, .2);
+        padding: 2rem 3rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(.25);
+        transition: all .5s .2s;
+    }
+
+    &__content-reviews {
+        width: 75%;
+        background-color: var(--color-white);
+    }
+
+    &__content-booking {
+        width: 40%;
+        background-color: var(--color-grey-dark-1);
+        border: 2px solid white;
+        color: white;
+    }
+
+    &__content-booking > &__heading > &__close {
+
+        &:link,
+        &:visited {
+            color: white;
+        }
+
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+
+    &__content-booking > &__heading > &__heading-title {
+        flex: 1 0 80%;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 100;
+        font-size: 3rem;
+    }
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 3rem;
+    }
+
+    &__heading-title {
+        font-size: 2.5rem;
+    }
+
+    &__reviews {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    &__review {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 30%;
+        margin: 1rem 2rem;
+        font-size: 1.25rem;
+        justify-content: space-between;
+    }
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__content-reviews,
+    &:target &__content-booking {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+     &__close {
+
+         &:link,
+         &:visited {
+             color: var(--color-grey-dark-1);
+             font-size: 3rem;
+             text-decoration: none;
+             display: inline-block;
+             transition: all .2s;
+         }
+
+         &:hover {
+             color: var(--color-primary);
+         }
+     }
+}
 
 
 //////////////////////////////////
-// AUTOCOMPLETE
-.autocomplete {
-    position: relative;
-    display: flex;
-    width: 100%;
-    z-index: 1000;
-}
-
-.autocomplete-items {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-}
-
-.autocomplete-items div {
-    padding: 10px;
-    cursor: pointer;
-    background-color: var(--color-grey-dark-1);
-    color: var(--color-white);
-}
-
-.autocomplete-items div::after {
-    content: '';
-    display: block;
-    padding: .3rem;
-    border-bottom: 3px solid var(--color-primary);
-    transform: scaleX(0);
-    transition: transform .25s ease-in-out;
-}
-
-.autocomplete-items div:hover::after {
-    transform: scaleX(1);
-}
-
-.autocomplete-active {
-    background-color:  var(--color-primary) !important;
-    color: var(--color-white);
+// UTILITIES
+.textDecoration {
+    text-decoration: none;
 }
