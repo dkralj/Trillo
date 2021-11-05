@@ -95,4 +95,18 @@ document.addEventListener("click", function (e) {
 });
 }
 
-autocomplete(document.getElementById("searchInput"), hotels);
+// Code below lets us have different search suggestions depending on the page we are on
+var element = document.getElementsByClassName("searchInputField")[0].id;
+
+if(element === "searchInputHotels") {
+  autocomplete(document.getElementById("searchInputHotels"), hotels);
+} else if (element === "searchInputAirlines") {
+  autocomplete(document.getElementById("searchInputAirlines"), airlines);
+} else if (element === "searchInputRentals") {
+  autocomplete(document.getElementById("searchInputRentals"), rentals);
+} else if (element === "searchInputTours") {
+  autocomplete(document.getElementById("searchInputTours"), tours);
+}
+
+
+

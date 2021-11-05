@@ -18,42 +18,340 @@
       <header class="header">
         <img src="../img/logo.png" alt="trillo logo" class="logo" />
 
-        <form action="" class="search">
-          <input
-            type="text"
-            class="search__input"
-            placeholder="Search hotels"
-          />
-          <button class="search__button">
-            <svg class="search__icon">
-              <use xlink:href="../img/sprite.svg#icon-magnifying-glass"></use>
-            </svg>
-          </button>
+        <form autocomplete="off" class="search">
+          <div class="autocomplete">
+            <input
+              id="searchInputRentals"
+              type="text"
+              class="search__input searchInputField"
+              placeholder="Search car rentals"
+            />
+            <button class="search__button">
+              <svg class="search__icon">
+                <use xlink:href="../img/sprite.svg#icon-magnifying-glass"></use>
+              </svg>
+            </button>
+          </div>
         </form>
 
         <nav class="user-nav">
-          <div class="user-nav__icon-box">
+          <div class="user-nav__icon-box-notification">
             <svg class="user-nav__icon">
               <use xlink:href="../img/sprite.svg#icon-bookmark"></use>
             </svg>
             <span class="user-nav__notification">7</span>
+            <div class="user-nav__notifications">
+              <h1 class="user-nav__notifications-heading">Notifications</h1>
+              <div class="user-nav__notifications-box">
+                <ul>
+                  <li class="user-nav__notifications-item">
+                    <img
+                      src="../img/Users/user-2.jpg"
+                      alt="Notifications photo"
+                      class="user-nav__notifications-item-photo"
+                    />
+                    <div class="user-nav__notifications-item-box">
+                      <p>
+                        <span class="user-nav__notifications-highlight"
+                          >Mary Thomas</span
+                        >
+                        has reviewed
+                        <span class="user-nav__notifications-highlight"
+                          >Hotel Las Palmas</span
+                        >.
+                      </p>
+                      <div
+                        class="user-nav__notifications-item-box-icon-and-time"
+                      >
+                        <svg class="user-nav__notifications-item-icon-review">
+                          <use xlink:href="../img/sprite.svg#icon-flag"></use>
+                        </svg>
+                        <p>25m</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="user-nav__notifications-item">
+                    <img
+                      src="../img/Users/user-3.jpg"
+                      alt="Notifications photo"
+                      class="user-nav__notifications-item-photo"
+                    />
+                    <div class="user-nav__notifications-item-box">
+                      <p>
+                        <span class="user-nav__notifications-highlight"
+                          >Logan James</span
+                        >
+                        liked
+                        <span class="user-nav__notifications-highlight"
+                          >Hotel Las Palmas</span
+                        >
+                      </p>
+                      <div
+                        class="user-nav__notifications-item-box-icon-and-time"
+                      >
+                        <svg class="user-nav__notifications-item-icon-like">
+                          <use
+                            xlink:href="../img/sprite.svg#icon-thumbs-up"
+                          ></use>
+                        </svg>
+                        <p>1h</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="user-nav__notifications-item">
+                    <img
+                      src="../img/Users/user-6.jpg"
+                      alt="Notifications photo"
+                      class="user-nav__notifications-item-photo"
+                    />
+                    <div class="user-nav__notifications-item-box">
+                      <p>
+                        <span class="user-nav__notifications-highlight"
+                          >Lucy Jones</span
+                        >
+                        changed her location to
+                        <span class="user-nav__notifications-highlight"
+                          >Albufeira, Portugal</span
+                        >.
+                      </p>
+                      <div
+                        class="user-nav__notifications-item-box-icon-and-time"
+                      >
+                        <svg class="user-nav__notifications-item-icon-location">
+                          <use
+                            xlink:href="../img/sprite.svg#icon-location"
+                          ></use>
+                        </svg>
+                        <p>12h</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="user-nav__notifications-item">
+                    <img
+                      src="../img/Users/user-5.jpg"
+                      alt="Notifications photo"
+                      class="user-nav__notifications-item-photo"
+                    />
+                    <div class="user-nav__notifications-item-box">
+                      <p>
+                        <span class="user-nav__notifications-highlight"
+                          >Mike Len</span
+                        >
+                        went shopping at
+                        <span class="user-nav__notifications-highlight"
+                          >Albufeira, Portugal</span
+                        >.
+                      </p>
+                      <div
+                        class="user-nav__notifications-item-box-icon-and-time"
+                      >
+                        <svg class="user-nav__notifications-item-icon-shop">
+                          <use xlink:href="../img/sprite.svg#icon-shop"></use>
+                        </svg>
+                        <p>20h</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="user-nav__icon-box">
+          <div class="user-nav__icon-box-chat">
             <svg class="user-nav__icon">
               <use xlink:href="../img/sprite.svg#icon-chat"></use>
             </svg>
             <span class="user-nav__notification">30</span>
+            <div class="user-nav__chat">
+              <div class="user-nav__chat-header">
+                <h1 class="user-nav__chat-heading">Messanger</h1>
+                <div class="user-nav__chat-header-icons">
+                  <svg class="user-nav__chat-header-icon">
+                    <use
+                      xlink:href="../img/sprite.svg#icon-dots-three-horizontal"
+                    ></use>
+                    <span class="user-nav__chat-header-icon-tooltip-more">
+                      More
+                    </span>
+                  </svg>
+                  <svg class="user-nav__chat-header-icon">
+                    <use xlink:href="../img/sprite.svg#icon-resize-full-screen">
+                      <span
+                        class="user-nav__chat-header-icon-tooltip-full-screen"
+                      >
+                        Full screen
+                      </span>
+                    </use>
+                  </svg>
+                  <svg class="user-nav__chat-header-icon">
+                    <use xlink:href="../img/sprite.svg#icon-squared-plus"></use>
+                    <span class="user-nav__chat-header-icon-tooltip-add">
+                      Add
+                    </span>
+                  </svg>
+                  <svg class="user-nav__chat-header-icon">
+                    <use xlink:href="../img/sprite.svg#icon-new-message"></use>
+                    <span
+                      class="user-nav__chat-header-icon-tooltip-new-message"
+                    >
+                      New
+                    </span>
+                  </svg>
+                </div>
+              </div>
+              <div class="user-nav__chat-messages">
+                <ul>
+                  <li class="user-nav__chat-message">
+                    <img
+                      class="user-nav__chat-message-photo"
+                      src="../img/Users/user-2.jpg"
+                      alt="User image"
+                    />
+                    <div class="user-nav__chat-message-box">
+                      <div class="user-nav__chat-message-name-and-time">
+                        <p class="user-nav__chat-message-name">Mary Thomas</p>
+                        <div class="user-nav__chat-message-time">10:15 am</div>
+                      </div>
+                      <p class="user-nav__chat-message-content">
+                        Hi Jonas! How are you?
+                      </p>
+                    </div>
+                  </li>
+                  <li class="user-nav__chat-message">
+                    <img
+                      class="user-nav__chat-message-photo"
+                      src="../img/Users/user-3.jpg"
+                      alt="User image"
+                    />
+                    <div class="user-nav__chat-message-box">
+                      <div class="user-nav__chat-message-name-and-time">
+                        <p class="user-nav__chat-message-name">Logan James</p>
+                        <div class="user-nav__chat-message-time">5:37 pm</div>
+                      </div>
+                      <p class="user-nav__chat-message-content">
+                        Great news! I was looking for something like that.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="user-nav__chat-message">
+                    <img
+                      class="user-nav__chat-message-photo"
+                      src="../img/Users/user-4.jpg"
+                      alt="User image"
+                    />
+                    <div class="user-nav__chat-message-box">
+                      <div class="user-nav__chat-message-name-and-time">
+                        <p class="user-nav__chat-message-name">John Perry</p>
+                        <div class="user-nav__chat-message-time">Sat</div>
+                      </div>
+                      <div class="user-nav__chat-message-content-and-photo">
+                        <p class="user-nav__chat-message-content">You: Bye!</p>
+                        <img
+                          class="user-nav__chat-message-content-photo"
+                          src="../img/Users/user-4.jpg"
+                          alt="User image"
+                        />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="user-nav__chat-message">
+                    <img
+                      class="user-nav__chat-message-photo"
+                      src="../img/Users/user-5.jpg"
+                      alt="User image"
+                    />
+                    <div class="user-nav__chat-message-box">
+                      <div class="user-nav__chat-message-name-and-time">
+                        <p class="user-nav__chat-message-name">Mike Len</p>
+                        <div class="user-nav__chat-message-time">Fri</div>
+                      </div>
+                      <div class="user-nav__chat-message-content-and-photo">
+                        <p class="user-nav__chat-message-content">
+                          You: Have a good one.
+                        </p>
+                        <img
+                          class="user-nav__chat-message-content-photo"
+                          src="../img/Users/user-5.jpg"
+                          alt="User image"
+                        />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="user-nav__chat-message">
+                    <img
+                      class="user-nav__chat-message-photo"
+                      src="../img/Users/user-6.jpg"
+                      alt="User image"
+                    />
+                    <div class="user-nav__chat-message-box">
+                      <div class="user-nav__chat-message-name-and-time">
+                        <p class="user-nav__chat-message-name">Lucy Jones</p>
+                        <div class="user-nav__chat-message-time">Wed</div>
+                      </div>
+                      <p class="user-nav__chat-message-content">
+                        Ok! See you there!
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div class="user-nav__user">
             <img
-              src="../img/user.jpg"
+              src="../img/Users/user.jpg"
               alt="Picture of current user"
               class="user-nav__user-photo"
             />
-            <span class="user-nav__user-name">Dino</span>
+            <span class="user-nav__user-name">Jonas</span>
+            <div class="user-nav__user-info">
+              <img
+                src="../img/Users/user.jpg"
+                alt="Picture of current user"
+                class="user-nav__user-info-photo"
+              />
+              <h3 class="user-nav__user-info-name">Jonas Schmedtmann</h3>
+              <ul class="user-nav__user-info-list">
+                <li class="user-nav__user-info-item">
+                  <a href="#" class="user-nav__user-info-link">
+                    <svg class="user-nav__user-info-icon">
+                      <use xlink:href="../img/sprite.svg#icon-pencil"></use>
+                    </svg>
+                    <span>Edit</span>
+                  </a>
+                </li>
+                <li class="user-nav__user-info-item">
+                  <a href="#" class="user-nav__user-info-link">
+                    <svg class="user-nav__user-info-icon">
+                      <use xlink:href="../img/sprite.svg#icon-cog"></use>
+                    </svg>
+                    <span>Settings</span>
+                  </a>
+                </li>
+                <li class="user-nav__user-info-item">
+                  <a href="#" class="user-nav__user-info-link">
+                    <svg class="user-nav__user-info-icon">
+                      <use
+                        xlink:href="../img/sprite.svg#icon-help-with-circle"
+                      ></use>
+                    </svg>
+                    <span>Help</span>
+                  </a>
+                </li>
+
+                <li class="user-nav__user-info-item">
+                  <a href="#" class="user-nav__user-info-link">
+                    <svg class="user-nav__user-info-icon">
+                      <use xlink:href="../img/sprite.svg#icon-log-out"></use>
+                    </svg>
+                    <span>Sign out</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </nav>
       </header>
+
       <div class="content">
         <nav class="sidebar">
           <ul class="side-nav">
@@ -93,11 +391,394 @@
             </li>
           </ul>
 
-          <div class="legal">&copy; 2017 by trillo. All rights reserved.</div>
+          <div class="legal">&copy; 2021 by trillo. All rights reserved.</div>
         </nav>
 
-        <main></main>
+        <main class="rentals-view">
+          <div class="gallery">
+            <figure class="gallery__item">
+              <img
+                src="../img/Rentals/audi-1.jpg"
+                alt="Photo of audi 1"
+                class="gallery__photo"
+              />
+              <figcaption class="gallery__caption">German quality</figcaption>
+            </figure>
+            <figure class="gallery__item">
+              <img
+                src="../img/Rentals/audi-2.jpeg"
+                alt="Photo of audi 2"
+                class="gallery__photo"
+              />
+              <figcaption class="gallery__caption">Finest leather</figcaption>
+            </figure>
+            <figure class="gallery__item">
+              <img
+                src="../img/Rentals/audi-3.jpg"
+                alt="Photo of audi 3"
+                class="gallery__photo"
+              />
+              <figcaption class="gallery__caption">Excellent design</figcaption>
+            </figure>
+          </div>
+
+          <div id="overview" class="overview">
+            <h1 class="overview__heading">Audi A6 3.0 TDI</h1>
+            <div class="overview__stars">
+              <svg class="overview__icon-star">
+                <use xlink:href="img/sprite.svg#icon-star"></use>
+              </svg>
+              <svg class="overview__icon-star">
+                <use xlink:href="img/sprite.svg#icon-star"></use>
+              </svg>
+              <svg class="overview__icon-star">
+                <use xlink:href="img/sprite.svg#icon-star"></use>
+              </svg>
+              <svg class="overview__icon-star">
+                <use xlink:href="img/sprite.svg#icon-star"></use>
+              </svg>
+              <svg class="overview__icon-star">
+                <use xlink:href="img/sprite.svg#icon-star"></use>
+              </svg>
+            </div>
+            <div class="overview__location">
+              <svg class="overview__icon-location">
+                <use xlink:href="../img/sprite.svg#icon-key"></use>
+              </svg>
+              <a
+                href="https://www.audi.com/en/experience-audi/models-and-technology/production-models/a6.html"
+                target="_blank"
+                class="btn-inline textDecoration"
+              >
+                Full Specification
+              </a>
+            </div>
+            <div class="overview__rating">
+              <div class="overview__rating-average">9.8</div>
+              <div class="overview__rating-count">265 votes</div>
+            </div>
+          </div>
+
+
+          <div class="detail">
+            <div class="description">
+              <p class="paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
+                nisi dignissimos debitis ratione sapiente saepe. Accusantium
+                cumque, quas, ut corporis incidunt deserunt quae architecto
+                voluptate.
+              </p>
+              <p class="paragraph">
+                Accusantium cumque, quas, ut corporis incidunt deserunt quae
+                architecto voluptate delectus, inventore iure aliquid aliquam.
+              </p>
+              <ul class="list">
+                <li class="list__item">3.0 engine</li>
+                <li class="list__item">Diesel</li>
+                <li class="list__item">Top speed: 224 km/h</li>
+                <li class="list__item">120 kW</li>
+                <li class="list__item">4.8 - 4.4 l/100km</li>
+                <li class="list__item">MMI navigation system</li>
+                <li class="list__item">Gray metalic color</li>
+                <li class="list__item">21' rims</li>
+              </ul>
+              <div class="recommend">
+                <p class="recommend__count">
+                  Logan and 2 other friends recommend this car.
+                </p>
+                <div class="recommend__friends">
+                  <img
+                    src="../img/Users/user-3.jpg"
+                    alt="Friend 1"
+                    class="recommend__photo"
+                  />
+                  <img
+                    src="../img/Users/user-4.jpg"
+                    alt="Friend 2"
+                    class="recommend__photo"
+                  />
+                  <img
+                    src="../img/Users/user-5.jpg"
+                    alt="Friend 3"
+                    class="recommend__photo"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="user-reviews">
+              <figure class="review">
+                <blockquote class="review__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
+                  doloremque architecto dicta animi, totam, itaque officia ex.
+                </blockquote>
+                <figcaption class="review__user">
+                  <img
+                    src="../img/Users/user-3.jpg"
+                    alt="User 3"
+                    class="review__photo"
+                  />
+                  <div class="review__user-box">
+                    <p class="review__user-name">Logan James</p>
+                    <p class="review__user-date">Apr 3rd, 2020</p>
+                  </div>
+                  <div class="review__user-rating">10</div>
+                </figcaption>
+              </figure>
+              <figure class="review">
+                <blockquote class="review__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
+                  doloremque architecto dicta animi.
+                </blockquote>
+                <figcaption class="review__user">
+                  <img
+                    src="../img/Users/user-5.jpg"
+                    alt="User 5"
+                    class="review__photo"
+                  />
+                  <div class="review__user-box">
+                    <p class="review__user-name">Mike Len</p>
+                    <p class="review__user-date">Sept 27th, 2021</p>
+                  </div>
+                  <div class="review__user-rating">9.7</div>
+                </figcaption>
+              </figure>
+              <button class="btn-inline">
+                <a href="#popup-reviews">Show all <span>&rarr;</span></a>
+              </button>
+            </div>
+          </div>
+
+          <div class="cta">
+            <h2 class="cta__book-now">
+              Great news! We have 2 more cars waiting for you!
+            </h2>
+            <button class="btn">
+              <a href="#popup-booking">
+                <span class="btn__visible">Rent now</span>
+                <span class="btn__invisible">Only 2 cars left</span>
+              </a>
+            </button>
+          </div>
+        </main>
       </div>
     </div>
+
+    <div class="popup" id="popup-reviews">
+      <div class="popup__content-reviews">
+        <div class="popup__heading">
+          <h2 class="popup__heading-title">Reviews for Audi A6 3.0 TDI</h2>
+          <a href="#overview" class="popup__close">&times;</a>
+        </div>
+        <div class="popup__reviews">
+          <figure class="review popup__review">
+            <blockquote class="review__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
+              doloremque architecto dicta animi, totam, itaque officia ex.
+            </blockquote>
+            <figcaption class="review__user">
+              <img src="../img/Users/user-3.jpg" alt="User 3" class="review__photo" />
+              <div class="review__user-box">
+                <p class="review__user-name">Logan James</p>
+                <p class="review__user-date">Feb 29th, 2020</p>
+              </div>
+              <div class="review__user-rating">9.1</div>
+            </figcaption>
+          </figure>
+
+          <figure class="review popup__review">
+            <blockquote class="review__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </blockquote>
+            <figcaption class="review__user">
+              <img src="../img/Users/user-5.jpg" alt="User 5" class="review__photo" />
+              <div class="review__user-box">
+                <p class="review__user-name">Mike Len</p>
+                <p class="review__user-date">Jul 23rd, 2021</p>
+              </div>
+              <div class="review__user-rating">9.8</div>
+            </figcaption>
+          </figure>
+
+          <figure class="review popup__review">
+            <blockquote class="review__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
+              doloremque architecto dicta animi.
+            </blockquote>
+            <figcaption class="review__user">
+              <img src="../img/Users/user-1.jpg" alt="User 1" class="review__photo" />
+              <div class="review__user-box">
+                <p class="review__user-name">Nick Smith</p>
+                <p class="review__user-date">Dec 13th, 2020</p>
+              </div>
+              <div class="review__user-rating">9.3</div>
+            </figcaption>
+          </figure>
+
+          <figure class="review popup__review">
+            <blockquote class="review__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
+              doloremque architecto dicta animi, totam, itaque officia ex.
+            </blockquote>
+            <figcaption class="review__user">
+              <img src="../img/Users/user-4.jpg" alt="User 4" class="review__photo" />
+              <div class="review__user-box">
+                <p class="review__user-name">John Perry</p>
+                <p class="review__user-date">Aug 1st, 2021</p>
+              </div>
+              <div class="review__user-rating">9.8</div>
+            </figcaption>
+          </figure>
+
+          <figure class="review popup__review">
+            <blockquote class="review__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
+              doloremque architecto dicta animi, totam, itaque officia ex.
+            </blockquote>
+            <figcaption class="review__user">
+              <img src="../img/Users/user-2.jpg" alt="User 2" class="review__photo" />
+              <div class="review__user-box">
+                <p class="review__user-name">Mary Thomas</p>
+                <p class="review__user-date">Mar 25th, 2020</p>
+              </div>
+              <div class="review__user-rating">9.7</div>
+            </figcaption>
+          </figure>
+
+          <figure class="review popup__review">
+            <blockquote class="review__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
+              doloremque architecto dicta animi, totam, itaque officia ex.
+            </blockquote>
+            <figcaption class="review__user">
+              <img src="../img/Users/user-6.jpg" alt="User 6" class="review__photo" />
+              <div class="review__user-box">
+                <p class="review__user-name">Lucy Jones</p>
+                <p class="review__user-date">Oct 22nd, 2021</p>
+              </div>
+              <div class="review__user-rating">9.0</div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div id="popup-booking" class="popup">
+      <div class="popup__content-booking">
+        <div class="popup__heading">
+          <h2 class="popup__heading-title">Rent your car now</h2>
+          <a href="#overview" class="popup__close">&times;</a>
+        </div>
+        <div class="popup__form">
+          <form method="get" action="/index.html">
+            <div class="popup__input-group">
+              <div class="popup__input-wrap">
+                <label for="fname" class="popup__form-label"
+                  >First name</label
+                >
+                <input
+                  type="text"
+                  class="popup__form-input popup__fname"
+                  name="fname"
+                  id="fname"
+                  required
+                />
+              </div>
+
+              <div class="popup__input-wrap">
+                <label for="lname" class="popup__form-label">Last name</label>
+                <input
+                  type="text"
+                  class="popup__form-input"
+                  name="lname"
+                  id="lname"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="popup__input-wrap">
+              <label for="email" class="popup__form-label"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                class="popup__form-input"
+                name="email"
+                id="email"
+                required
+              />
+            </div>
+
+            <div class="popup__input-wrap">
+              <label for="address" class="popup__form-label">Address</label>
+              <input
+                type="text"
+                class="popup__form-input"
+                name="address"
+                id="address"
+                required
+              />
+            </div>
+
+            <div class="popup__input-wrap">
+              <label for="city" class="popup__form-label">City</label>
+              <input
+                type="text"
+                class="popup__form-input"
+                name="city"
+                id="city"
+                required
+              />
+            </div>
+
+            <div class="popup__input-wrap">
+              <label for="country" class="popup__form-label">Country</label>
+              <input
+                type="text"
+                class="popup__form-input"
+                name="country"
+                id="country"
+                required
+              />
+            </div>
+
+            <div class="popup__input_wrap">
+              <label class="popup__form-label">Gender</label>
+              <ul>
+                <li>
+                  <label class="popup__radio-wrap">
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="male"
+                      class="popup__input-radio"
+                      checked
+                    />
+                    <span>Male</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="popup__radio-wrap">
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="female"
+                      class="popup__input-radio"
+                    />
+                    <span>Female</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <input class="popup__btn" type="submit" value="Rent now!" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/script.js"></script>
   </body>
 </html>
