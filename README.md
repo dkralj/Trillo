@@ -2,6 +2,8 @@
 
 Trillo project is **one** of the three projects built on design made by Jonas Schmedtmann.
 
+Trillo is all-in-one booking app for family/solo holiday with ability to book all you need on the vacation. Hotel, airline, rent a car and tours are available to book/rent. All in all, user can do everything in this app.
+
 This project is done by using flexbox.
 
 In the next sections I will be breaking down the things that have been shown in separate project sections, starting from general project settings until writing media queries for responsive design.
@@ -35,3 +37,20 @@ I am not the owner of page design. For any question about using the page design 
 ## Hotel overview
 
 - How to create **infinite animation** efect
+
+## 3 new pages
+### Flight page
+
+- Changed content to match page name
+- Added dropdown on reservation form for seats
+- Search suggestions for airline companies
+
+### Car rental page
+
+- Changed content to match page name
+- Search suggestions for available cars for rent
+
+### Tours page
+
+- Changed content to match page name
+- Search suggestions for available tours
